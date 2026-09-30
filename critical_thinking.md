@@ -1,0 +1,3 @@
+# Critical Thinking
+
+I centered the smiley using `Offset(size.width / 2, size.height / 2)` and calculated the face radius with `size.shortestSide * 0.4`. The mouth uses a `Rect` based on the face radius and a `drawArc` with a `0.70 * pi` sweep. Testing the smiley on the phone emulator showed that the face remains centered when the available screen dimensions change. Using `size` and `radius` instead of fixed pixel coordinates makes the drawing responsive in portrait and landscape. The painter returns `true` from `shouldRepaint` when the mood changes so the expression updates with the slider.
